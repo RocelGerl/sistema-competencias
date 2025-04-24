@@ -38,17 +38,25 @@
 }
 
 /*Login*/
-form .btn:hover {
+#btnIngresar:hover {
     background-color: var(--verde-hover);
+    color: var(--blanco);
 }
 
-form label {
+.form-label {
     color: var(--azul-profundo);
     font-size: large;
 }
 
-form input {
+.form-control {
     border: 1px solid var(--gris-claro);
+    font-size: 16px;
+}
+
+.form-control:focus{
+    outline: 2px solid var(--verde-competitivo);
+    box-shadow: none;
+    border: none;
 }
 
 .icono i{
@@ -58,4 +66,29 @@ form input {
 
 h2{
     color: var(--azul-profundo);
+}
+
+.error-message{
+    background-color: var(--rojo-energia);
+    color: var(--blanco);
+    border-radius: 5px;
+    font-size: 19px;
+    height: 30px;
+    justify-content: center;
+}
+
+@media(max-width: 576px){
+    .ingresar{
+        width: 90%;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .form-control{
+        height: 45px;
+    }
+
+    #btnIngresar{
+        padding: 12px;
+    }
 }
