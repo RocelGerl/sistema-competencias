@@ -1,0 +1,40 @@
+:root{
+    --azul-profundo: #1A3E72; /*Usaremos para el Header, los botones principales y los titulos*/
+    --verde-competitivo: #2ECC71; /*Usaremos para los botones de accion(Iniciar, guardar)*/
+    --verde-hover: #27AE60; /*Usaremos para el hover de los botones*/
+    --gris-claro: #DEE2E6; /*Usaremos para los bordes del login*/
+    --blanco-nube: #F8F9FA; /*Usaremos para Fondo y los cards*/
+    --gris-neutral: #6C757D; /*Usaremos para el texto secundario y los bordes*/
+    --rojo-energia: #E74C4C; /*Usaremos para alertas, botones criticos (Finalizar carrera)*/
+    --amarillo-advertencia: #F39C12; /*Usaremos para el temporizador y avisos*/
+    --blanco: #fff; /* Color blanco*/
+
+    .bg-card-login{
+        background-color: var(--blanco);
+    }
+
+    .bg-fondo{
+        background-color: var(--blanco-nube);
+    }
+    
+    .bg-verde{
+        background-color: var(--verde-competitivo);
+        color: var(--blanco);
+    }
+}
+
+/*Login*/
+form .btn:hover{
+    background-color: var(--verde-hover);
+}
+
+form label{
+    color: var(--azul-profundo);
+    font-size: large;
+}
+
+form input{
+    border: 1px solid var(--gris-claro);
+}
+
+
