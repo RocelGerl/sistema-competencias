@@ -17,24 +17,24 @@
     /*Usaremos para el temporizador y avisos*/
     --blanco: #fff;
     /* Color blanco*/
+}
 
-    .bg-card-login {
-        background-color: var(--blanco);
-    }
+.bg-card-login {
+    background-color: var(--blanco);
+}
 
-    .bg-fondo {
-        background-color: var(--blanco-nube);
-    }
+.bg-fondo {
+    background-color: var(--blanco-nube);
+}
 
-    .bg-verde {
-        background-color: var(--verde-competitivo);
-        color: var(--blanco);
-    }
+.bg-verde {
+    background-color: var(--verde-competitivo);
+    color: var(--blanco);
+}
 
-    .bg-rojo {
-        background-color: var(--rojo-energia);
-        color: var(--blanco);
-    }
+.bg-rojo {
+    background-color: var(--rojo-energia);
+    color: var(--blanco);
 }
 
 /*Login*/
