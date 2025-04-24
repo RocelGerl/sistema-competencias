@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app=capble" content="yes">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
@@ -17,7 +21,8 @@
 
 <body class="bg-fondo">
     <div class="vh-100 d-flex justify-content-center align-items-center">
-        <div class="container bg-card-login shadow-lg py-5 mx-5 rounded-5 ingresar" style="width: 400px; height: 600px;">
+        <div class="container bg-card-login shadow-lg py-5 mx-5 rounded-5 ingresar"
+            style="width: 400px; height: 600px;">
             <div class="text-center w-100 mb-4 icono">
                 <i class="fas fa-user rounded-circle p-4 fs-1 mb-2"></i>
                 <h2>Ingresar</h2>
@@ -50,15 +55,20 @@
         const btnIngresar = document.getElementById('btnIngresar');
         const mensaje = document.getElementById('mensaje');
 
-        btnIngresar.addEventListener('click', function () {
+        btnIngresar.addEventListener('click', function (e) {
+            e.preventDefault();
             this.textContent = 'Verificando';
 
-            const usuario = document.getElementById('usuario').value;
-            const contrasena = document.getElementById('contrasena').value;
+            const usuario = document.getElementById('usuario').value.trim();
+            const contrasena = document.getElementById('contrasena').value.trim();
 
             mensaje.className = 'error-message text-center d-none';
 
-            if (usuario !== "admin" && contrasena !== "123") {
+            if(!usuario || !contrasena){
+               
+                mensaje.innerHTML = `<p><i class="fas fa-times-circle me-2"></i>Llena todos los campos</p>`;
+                mensaje.classList.replace('d-none', 'd-block');
+            } else if (usuario !== "admin" || contrasena !== "123") {
                 mensaje.innerHTML = `<p><i class="fas fa-times-circle me-2"></i>Acceso incorrecto</p>`;
                 mensaje.classList.replace('d-none', 'd-block');
             }
